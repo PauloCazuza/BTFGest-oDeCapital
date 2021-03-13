@@ -1,6 +1,7 @@
 import firebase from "../../config/config";
 import 'firebase/auth';
 import { useState } from "react";
+import "./login.css"
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -11,7 +12,7 @@ function Login() {
       alert('LOGIN FEITO!');
 
     }).catch(error => {
-        alert(`${getMessageByErrorCode(error.code)}`)
+      alert(`${getMessageByErrorCode(error.code)}`)
     })
   }
 
